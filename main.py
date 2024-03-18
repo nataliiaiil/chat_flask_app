@@ -7,6 +7,13 @@ app.config['SECRET_KEY'] = 'vnkdjnfjknfl1232#'
 socketio = SocketIO(app)
 
 
-if __name__ = '__main__':
+@app.route('/')
+def sessions():
+    return render_template('session.html')
+
+
+
+
+if __name__ == '__main__':
     socketio.run(app, debug=True)
 
